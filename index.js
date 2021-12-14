@@ -12,7 +12,7 @@ document.getElementById("form-buttom").addEventListener("click", function(){
         //     return false;
         // }
         //     return true;
-      })
+      // })
 
     //2.取得每題被選取的value
     selectage = document.querySelector('#age');

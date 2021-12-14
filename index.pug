@@ -19,7 +19,7 @@ html(lang='en')
             .col-6.banner-left ji3
             .col-6.banner-right
                 .banner-label
-                    .banner-label-title 開始尋找最佳手機資費方案！
+                    .banner-label-title 開始尋找最佳手機資費方案!
                     .banner-label-content 
                         | 填寫下方問卷
                         br
@@ -50,6 +50,12 @@ html(lang='en')
                             option(value='上班族') 上班族
                             option(value='軍公教') 軍公教
                             option(value='農林漁牧') 農林漁牧
+                .basic-info-4G5G
+                    .form-group
+                        label(for='G') 行動通訊技術選擇
+                        select#job.form-control(name='G')
+                            option(value='4G') 4G
+                            option(value='5G') 5G
         ///第二區域問題///
         .top-que-area
                 .que-txt 1.請比較兩種面向，並給予計分。
@@ -62,12 +68,12 @@ html(lang='en')
                     .target-txt 月租費價格
                     .target-txt 月租費價格
                     .target-txt 月租費價格
-                    .target-txt 上網用量
-                    .target-txt 上網用量
-                    .target-txt 上網用量
-                    .target-txt 通話量
-                    .target-txt 通話量
-                    .target-txt.target-txt-last 上網用量
+                    .target-txt 網路傳輸量(GB/吃到飽)
+                    .target-txt 網路傳輸量(GB/吃到飽)
+                    .target-txt 網路傳輸量(GB/吃到飽)
+                    .target-txt 網路速度
+                    .target-txt 網路速度
+                    .target-txt.target-txt-last 網外通話量
             .mid-area
                 .top-area
                     .left-txt 左邊面向重要性大於右邊
@@ -391,16 +397,16 @@ html(lang='en')
                 .target-rule-txt 
                     .tar-txt 面向
                 .targrt.tar2
-                    .target-txt 上網用量
-                    .target-txt 通話量
-                    .target-txt 上網速度
-                    .target-txt 收訊品質
-                    .target-txt 通話量
-                    .target-txt 上網速度
-                    .target-txt 收訊品質
-                    .target-txt 上網速度
-                    .target-txt 收訊品質
-                    .target-txt.target-txt-last 收訊品質
+                    .target-txt 網路傳輸量(GB/吃到飽)
+                    .target-txt 網路速度
+                    .target-txt 網外通話量
+                    .target-txt 合約長度
+                    .target-txt 網路速度
+                    .target-txt 網外通話量
+                    .target-txt 合約長度
+                    .target-txt 網外通話量
+                    .target-txt 合約長度
+                    .target-txt.target-txt-last 合約長度
 
     .form-btn
         button#form-buttom.btn(input type="submit" value="Submit") 確認送出
