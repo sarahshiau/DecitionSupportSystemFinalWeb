@@ -20,6 +20,7 @@ document.getElementById("form-buttom").addEventListener("click", function(){
     selectjob = document.querySelector('#job');
     var job = selectjob.value;
     // var que1 = document.querySelector('input[name="q1"]:checked').value;
+    var que1 = document.querySelector('input[name="q1"]:checked').value;
     var que2 = document.querySelector('input[name="q2"]:checked').value;
     var que3 = document.querySelector('input[name="q3"]:checked').value;
     var que4 = document.querySelector('input[name="q4"]:checked').value;
@@ -70,12 +71,15 @@ document.getElementById("form-buttom").addEventListener("click", function(){
           };
 
           console.log(resp)
+          var strData=JSON.stringify(resp);
+          localStorage.setItem("resp",strData); 
     });
 
     //test
     // console.log(que1);
 
-    alert('窩還沒寫完ˊowoˋ');
-    //跳轉到結果畫面
-    window.location.href="./result.html"
+    // alert('窩還沒寫完ˊowoˋ');
+    // //跳轉到結果畫面
+
+    window.location.href = "./result.html";
 });
