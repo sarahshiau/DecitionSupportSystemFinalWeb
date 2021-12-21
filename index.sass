@@ -13,14 +13,36 @@ nav
 
 ///banner///
 .banner
-    background-image: url("../image/banner.svg")
+    background-color: #0B0C2C
     .row
         .banner-left
             height: 600px
+            overflow: hidden
+            //banner-phone
+            .icon-phone
+                position: absolute
+                img
         .banner-right
             height: 600px
             display: flex
-            justify-content: center 
+            justify-content: center
+            //banner-bubble
+            .icon-bubble-leftup
+                position: absolute
+                top: 25%
+                left: 20px
+            .icon-bubble-leftdown
+                position: absolute
+                bottom: 10%
+                left: 20%
+            .icon-bubble-rightup
+                position: absolute
+                top: 50px 
+                right: 20%
+            .icon-bubble-rightdown
+                position: absolute
+                bottom: 50px 
+                right: 20%
             .banner-label
                 display: flex
                 justify-content: center
@@ -35,8 +57,11 @@ nav
 //往下箭頭
 .banner-down-arrow
     position: absolute
-    top: 570px
-    right: 47%
+    top: 600px
+    // right: 45%
+    // transform: translate(-30%)
+    left: 50%
+    transform: translate(-50%, -50%)
 
 ///問卷///
 .question

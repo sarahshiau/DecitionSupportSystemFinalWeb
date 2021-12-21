@@ -51,7 +51,9 @@ document.getElementById("form-buttom").addEventListener("click", function(){
     var age = selectage.value;
     selectjob = document.querySelector('#job');
     var job = selectjob.value;
-    // var que1 = document.querySelector('input[name="q1"]:checked').value;
+    selectG = document.querySelector('#G');
+    var G = selectG.value;
+
     var que1 = document.querySelector('input[name="q1"]:checked').value;
     var que2 = document.querySelector('input[name="q2"]:checked').value;
     var que3 = document.querySelector('input[name="q3"]:checked').value;
@@ -80,31 +82,47 @@ document.getElementById("form-buttom").addEventListener("click", function(){
     console.log(data)
 
 ////////////////4.傳送+接受回傳值
-    const url = 'http://10.10.10.100/getbrand.aspx';
-    
-    axios.post(url, data).then(resp => {
+    const url = 'localhost:59746/Default?q1=3';
 
+    axios.get(url, {
+      params: data
+    }).then(resp => {
+      
+      //let data = resp.data.replaceAll('\'', '"');
+      // let ans = JSON.parse(data);
+      // console.log('ans: ', ans);
+      sessionStorage.setItem("ans", JSON.stringify(resp.data));
+      //////////////跳轉到結果畫面
+      window.location.href = "./result.html";
     })
     .catch(error => {
-        let resp = {
-            "result1": {
-              "ent": "cht",
-              "solution": "499"
-            },
-            "result2": {
-              "ent": "cht",
-              "solution": "499"
-            },
-            "result3": {
-              "ent": "cht",
-              "solution": "499"
-            }
-          };
-          ////////////儲存資料
-          console.log(resp);
-          localStorage.setItem("resp",strData); 
+        
     });
+    
+    // axios.post(url, data).then(resp => {
+    //   console.log(resp);
+    //   //////////////跳轉到結果畫面
+    //   window.location.href = "./result.html";
+    // })
+    // .catch(error => {
+    //     let resp = {
+    //         "result1": {
+    //           "ent": "cht",
+    //           "solution": "499"
+    //         },
+    //         "result2": {
+    //           "ent": "cht",
+    //           "solution": "499"
+    //         },
+    //         "result3": {
+    //           "ent": "cht",
+    //           "solution": "499"
+    //         }
+    //       };
+    //       ////////////儲存資料
+    //       console.log(resp);
+    //       localStorage.setItem("resp",strData); 
+    // });
 
-    //////////////跳轉到結果畫面
-    window.location.href = "./result.html";
+    
 });
