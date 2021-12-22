@@ -34,8 +34,8 @@ html(lang='en')
                         | 填寫下方問卷
                         br
                         | 馬上找出最適合你的資費方案
-    .banner-down-arrow
-        img(src="./assets/image/banner_down_arrow.svg", alt="")
+            .banner-down-arrow
+                img(src="./assets/image/banner_down_arrow.svg", alt="")
     #question.question
         .area-01.row
             .basic-info
@@ -64,7 +64,7 @@ html(lang='en')
         .top-que-area
                 .que-txt 1.請比較兩種面向，並給予計分。
         .area-02.row
-            .left-area
+            .left-area.col-1.col-md-2
                 .target-rule-txt 
                     .tar-txt 面向
                 .targrt.tar1 
@@ -78,7 +78,7 @@ html(lang='en')
                     .target-txt 網路速度
                     .target-txt 網路速度
                     .target-txt.target-txt-last 網外通話量
-            .mid-area
+            .mid-area.col-8.col-md-7
                 .top-area
                     .left-txt 左邊面向重要性大於右邊
                     .right-txt 右邊面向重要性大於左邊
@@ -397,7 +397,7 @@ html(lang='en')
                         .custom-control.custom-radio
                             input#q10-degreeradio--5.custom-control-input(type='radio' name='q10' value='-5')
                             label.custom-control-label(for='q10-degreeradio--5') 5
-            .right-area
+            .right-area.col-1.col-md-2
                 .target-rule-txt 
                     .tar-txt 面向
                 .targrt.tar2

@@ -15,15 +15,21 @@ nav
 .banner
     background-color: #0B0C2C
     .row
+        height: 600px
+        @media screen and (max-width:1020px)
+            height: 500px
         .banner-left
-            height: 600px
             overflow: hidden
             //banner-phone
             .icon-phone
-                position: absolute
+                positio: relative
                 img
+                    position: absolute
+                    bottom: -30%
+                    @media screen and (max-width:1020px)
+                        width: 98%
+                        bottom: 0%
         .banner-right
-            height: 600px
             display: flex
             justify-content: center
             //banner-bubble
@@ -31,6 +37,9 @@ nav
                 position: absolute
                 top: 25%
                 left: 20px
+                @media screen and (max-width:1020px)
+                    top: 15%
+                    width: 50%
             .icon-bubble-leftdown
                 position: absolute
                 bottom: 10%
@@ -55,13 +64,13 @@ nav
                     padding-top: 5px
                     font-size: 18px
 //往下箭頭
-.banner-down-arrow
-    position: absolute
-    top: 600px
-    // right: 45%
-    // transform: translate(-30%)
-    left: 50%
-    transform: translate(-50%, -50%)
+.row
+    position: relative
+    .banner-down-arrow
+        position: absolute
+        bottom: -15%
+        left: 50%
+        transform: translate(-50%, -50%)
 
 ///問卷///
 .question
@@ -100,18 +109,30 @@ nav
         justify-content: center
         padding: 64px 40px ////////////////////高度寫死
         border-bottom: 2px solid #7e95c7
+        @media screen and (max-width:941px)
+            padding: 55px 0
+        @media screen and (max-width:768px)
+            padding: 48px 0
         .tar-txt
             padding: 10px
             font-weight: bolder
+            @media screen and (max-width:941px)
+                font-size: 8px
     .column
         .custom-control.custom-radio
             border-bottom: 2px solid rgba(0,0,0,0)
+
     //對象
     .targrt
         .target-txt
             padding: 20px
             text-align: center
             border-bottom: 2px solid #7e95c7
+            white-space: nowrap
+            overflow: hidden
+            @media screen and (max-width:941px)
+                font-size: 8px
+                padding: 20px 0px
         .target-txt-last
             border-bottom: 2px solid rgba(0,0,0,0)
     //
@@ -136,12 +157,22 @@ nav
             .left-txt
                 border: 1px solid
                 padding: 5px     
+                white-space: nowrap
+                overflow: hidden
+                @media screen and (max-width:941px)
+                    font-size: 4px
             .right-txt
                 border: 1px solid
-                padding: 5px    
+                padding: 5px
+                white-space: nowrap 
+                overflow: hidden 
+                @media screen and (max-width:941px)
+                    font-size: 4px
         .bottom-area
             display: flex
             justify-content: space-around
+            @media screen and (max-width:941px)
+                font-size: 8px
             .column
                 display: flex
                 flex-direction: column
@@ -151,6 +182,8 @@ nav
                     display: flex
                     align-items: center
                     height: 120px
+                    @media screen and (max-width:941px)
+                        height: 100px
                     .degree-txt
                         writing-mode: vertical-lr
                         font-weight: bolder
@@ -158,6 +191,10 @@ nav
                         border: 1px solid
                 .custom-radio
                     margin: 20px 0
+                    @media screen and (max-width:941px)
+                        margin: 18px 0
+                    @media screen and (max-width:768px)
+                        margin: 18px 0
     //右邊
     .right-area
         display: flex
